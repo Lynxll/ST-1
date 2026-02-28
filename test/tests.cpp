@@ -1,9 +1,9 @@
 // Copyright 2025 UNN-CS
 
-#include "alg.h"
-
-#include <cstdint>
 #include <gtest/gtest.h>
+#include <cstdint>
+
+#include "alg.h"
 
 TEST(st1_checkPrime, HandlesSmallNumbers) {
   EXPECT_FALSE(checkPrime(0));
@@ -65,7 +65,7 @@ TEST(st1_sumPrime, SmallExamples) {
 }
 
 TEST(st1_sumPrime, TwoMillion) {
-  uint64_t expected = 142913828922ULL;
-  uint64_t res = sumPrime(2000000ULL);
+  const uint64_t expected = 142913828922ULL;
+  const uint64_t res = sumPrime(2000000ULL);
   EXPECT_EQ(expected, res);
 }
