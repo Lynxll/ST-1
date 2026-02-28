@@ -1,10 +1,9 @@
 // Copyright 2025 UNN-CS
 
-#include <cstdint>
-
-#include <gtest/gtest.h>
-
 #include "alg.h"
+
+#include <cstdint>
+#include <gtest/gtest.h>
 
 TEST(st1_checkPrime, HandlesSmallNumbers) {
   EXPECT_FALSE(checkPrime(0));
