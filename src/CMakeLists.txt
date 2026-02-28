@@ -5,6 +5,7 @@ set(src ${${PROJECT_NAME}_SOURCE_DIR}/src/alg.cpp)
 
 message(PROJECT_SOURCE_DIR="${src}")
 
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 add_library(${PROJECT_NAME} SHARED
   ${header}
   ${src})
