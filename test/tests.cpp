@@ -1,5 +1,7 @@
 // Copyright 2025 UNN-CS
+
 #include <cstdint>
+
 #include <gtest/gtest.h>
 
 #include "alg.h"
@@ -19,7 +21,7 @@ TEST(st1_checkPrime, HandlesEvenAndComposite) {
 
 TEST(st1_checkPrime, HandlesLargePrimeAndComposite) {
   EXPECT_TRUE(checkPrime(97));
-  EXPECT_FALSE(checkPrime(121)); 
+  EXPECT_FALSE(checkPrime(121));
 }
 
 TEST(st1_nPrime, FirstPrimeIs2) {
@@ -43,7 +45,7 @@ TEST(st1_nextPrime, NextAfterSmallNumbers) {
 }
 
 TEST(st1_nextPrime, NextAfterPrimeSkipsItself) {
-  EXPECT_EQ(5u, nextPrime(3)); 
+  EXPECT_EQ(5u, nextPrime(3));
   EXPECT_EQ(13u, nextPrime(11));
 }
 
@@ -54,8 +56,8 @@ TEST(st1_nextPrime, NextAfterComposite) {
 
 TEST(st1_sumPrime, HandlesBoundsCorrectly) {
   EXPECT_EQ(0u, sumPrime(0));
-  EXPECT_EQ(0u, sumPrime(2)); 
-  EXPECT_EQ(2u, sumPrime(3));  
+  EXPECT_EQ(0u, sumPrime(2));
+  EXPECT_EQ(2u, sumPrime(3));
 }
 
 TEST(st1_sumPrime, SmallExamples) {
@@ -64,7 +66,7 @@ TEST(st1_sumPrime, SmallExamples) {
 }
 
 TEST(st1_sumPrime, TwoMillion) {
-  uint64_t res = sumPrime(2000000);
   uint64_t expected = 142913828922ULL;
+  uint64_t res = sumPrime(2000000ULL);
   EXPECT_EQ(expected, res);
 }
